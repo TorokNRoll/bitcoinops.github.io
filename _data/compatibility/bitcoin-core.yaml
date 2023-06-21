@@ -4,10 +4,10 @@ internal_url: /en/compatibility/bitcoin-core
 logo: /img/compatibility/bitcoin-core/bitcoin-core.png
 rbf:
   tested:
-    date: "2018-08-28"
+    date: "2023-06-20"
     platforms:
-      - macOS
-    version: "0.16.2"
+      - Linux
+    version: "25.0.0"
   features:
     receive:
       notification: "false"
@@ -22,6 +22,12 @@ rbf:
       shows_replaced_version: "true"
       shows_original_version: "true"
   examples:
+    - image: /img/compatibility/bitcoin-core/rbf/BCW7-Send-RBF.png
+      caption: >
+        Send - "Enable Replace-By-Fee" is selected by default.
+    - image: /img/compatibility/bitcoin-core/rbf/BCW7-Send-RBF-Default.png
+      caption: >
+        Send - "Replace-By-Fee" is indicated when a transaction is confirmed.
     - image: /img/compatibility/bitcoin-core/default-wallet-send-screen.png
       caption: >
         Sending Transaction - Default wallet send screen.
@@ -75,32 +81,45 @@ rbf:
         Receiving Replacement Transaction - Transaction Details screen for replacement transaction. No RBF note.
 segwit:
   tested:
-    date: "2019-03-28"
+    date: "2023-06-15"
     platforms:
-      - macOS
-    version: "0.17.1"
+      - Linux
+    version: "25.0.0"
   features:
     receive:
       p2sh_wrapped: "true"
       bech32: "true"
-      default: "p2sh_wrapped"
+      default: "bech32"
     send:
-      bech32: "true" 
+      bech32: "true"
       change_bech32: "true"
       segwit_v1: "Transaction can be created and broadcast, but does not make it
       to the mempool."
       bech32_p2wsh: "true"
   examples:
-    - image: /img/compatibility/bitcoin-core/segwit/receive-screen.png
+    - image: /img/compatibility/bitcoin-core/segwit/BCW3-Receive-Default.png
       caption: >
-        Receive - Generate a new address with tooltip. Bech32 option defaults to
-        unchecked. If checked, the checkbox will still be unchecked once
-        Bitcoin-Qt is restarted.
-    - image: /img/compatibility/bitcoin-core/segwit/address-screen.png
+        Receive - Upon bitcoin-qt start, the "Bech32 (Segwit)" option is selected by
+        default when generating a receive address.
+    - image: /img/compatibility/bitcoin-core/segwit/BCW2-Receive-P2WPKH.png
       caption: >
-        Address Details - Showing Bech32 address as well as equivalent uri and QR code.
-    - image: /img/compatibility/bitcoin-core/segwit/send-screen.png
+        Receive - A Native Segwit (P2WPKH) address is generated. Associated uri
+        and QR code is also displayed.
+    - image: /img/compatibility/bitcoin-core/segwit/BCW1-Receive-P2SH-Wrapped.png
       caption: >
-        Send - By default, the change address takes the same type as the address
-        being paid to. Can be overridden with change control's 'Custom change
-        address'.
+        Receive - A nested segwit, P2SH Wrapped, address can be generated.
+        Associated uri and QR code is also displayed.
+    - image: /img/compatibility/bitcoin-core/segwit/BCW4-Send-P2WPKH.png
+      caption: >
+        Send - It is possible to send to a native segwit, P2WPKH, address. The
+        "Pay To" input field does not detect a faulty address.
+    - image: /img/compatibility/bitcoin-core/segwit/BCW4-Send-P2WPKM-Confirm.png
+      caption: >
+        Send - A native segwit, P2WPKH, address can be confirmed.
+    - image: /img/compatibility/bitcoin-core/segwit/BCW5-Send-P2WSH.png
+      caption: >
+        Send - It is possible to send to a witness script hash, P2WSH, address. The
+        "Pay To" input field does not detect a faulty address.
+    - image: /img/compatibility/bitcoin-core/segwit/BCW5-Send-P2WSH-Confirm.png
+      caption: >
+        Send - A witness script hash, P2WSH, address can be confirmed.
