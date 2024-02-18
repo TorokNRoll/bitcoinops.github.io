@@ -38,6 +38,7 @@ h1, h2, h3, h4, h5, h6 { text-align: center; }
     {% if tool.segwit %}
       <tr>
         <td><a href="{{tool.internal_url}}#segwit">{{tool.name}}</a></td>
+        
       {% assign segwit_receive_default = "" %}
       {% assign segwit_receive_default_class = "default" %}
       {% case tool.segwit.features.receive.default %}

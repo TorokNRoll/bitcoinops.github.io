@@ -61,25 +61,25 @@ segwit:
       bech32: "false"
       default: "p2pkh"
     send:
-      bech32: "false" 
+      bech32: "false"
       change_bech32: "untested"
       segwit_v1: "Bech32 not supported."
       bech32_p2wsh: "false"
   examples:
     - image: /img/compatibility/abra/segwit/receive-screen.png
       caption: >
-        Abra uses P2PKH addresses for receiving. 
-    - image: /img/compatibility/abra/segwit/send-bech32.png  
+        Abra uses P2PKH addresses for receiving.
+    - image: /img/compatibility/abra/segwit/send-bech32.png
       caption: >
         Abra allows a bech32 address to be input and does not provide a warning.
         However, the review button was not enabled until a non-bech32 address
         was provided. The eventually sent transaction used exact change so
         change address format was not determined.
-    - image: /img/compatibility/abra/segwit/send-bech32-qr.png  
+    - image: /img/compatibility/abra/segwit/send-bech32-qr.png
       caption: >
         When using the QR code scanner, an error about address format was shown
         when scanning a bech32 address.
-    - image: /img/compatibility/abra/segwit/send-non-bech32.png  
+    - image: /img/compatibility/abra/segwit/send-non-bech32.png
       caption: >
         When using a non bech32 address, the "Review" button is enabled. Button
         is disabled when using bech32 address format.
