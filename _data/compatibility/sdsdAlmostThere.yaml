@@ -1,0 +1,19 @@
+---
+name: "AlmostThere"
+category: "Software Wallet (L1&L2)"
+homepage: "almostdone.io"
+keyfeatures: "This is almost done."
+
+feature:
+  bech32: "Send Support"
+  bech32m: "Full Support (send & receive)"
+  segwit_default_receive: "P2WSH"
+  segwit_change: "No"
+  rbf: "No Support"
+  cpfp: "Send Support"
+  pbst: "Full Support (send & receive)"
+  musig2: "Send Support"
+  payjoin: "No Support"
+  coinjoin: "Not Applicable"
+  silent_payments: "Full Support (send & receive)"
+  lightning: "Not Applicable"

@@ -1,13 +1,15 @@
 {% capture /dev/null %}
 
-{% if include.state == "true" and include.state3 == "true" %}
-  {% assign cell_emoji = "&#x1F4B8;" %}  <!--- Send Support --->
-  {% if include.state2 == "true" or include.state4 == "true" %}
-      {% assign cell_emoji = "&#x2705;" %}  <!--- Full Support --->
+{% if include.state == "Full Support (send & receive)" or include.state == "Send Support" %}
+  {% if include.state2 == "Full Support (send & receive)" or include.state2 == "Send Support" %}
+      {% assign cell_emoji = "&#x1F4B8;" %}  <!--- Send Support --->
+          {% if include.state == "Full Support (send & receive)" or include.state2 == "Full Support (send & receive)" %}      
+              {% assign cell_emoji = "&#x2705;" %}  <!--- Full Support --->
+          {% endif %}
   {% endif %}
-{% elsif include.state == "false" %}
+{% elsif include.state == "No Support" %}
   {% assign cell_emoji = "&#x274C;" %}  <!--- No Support --->
-{% else %}
+{% elsif include.state == "Not Applicable" %}
     {% assign cell_emoji = "&#x2796;" %} <!--- Not Applicable --->
 {% endif %}
 

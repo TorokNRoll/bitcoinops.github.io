@@ -1,0 +1,19 @@
+---
+name: "Wasabi Wallet"
+category: "Software Wallet (L1)"
+homepage: "https://wasabiwallet.io"
+keyfeatures: "Privacy by default, with coinjoin, block filters, and Tor"
+
+feature:
+  bech32: "Full Support (send & receive)"
+  bech32m: "Full Support (send & receive)"
+  segwit_default_receive: "P2WPKH"
+  segwit_change: "Yes"
+  rbf: "Full Support (send & receive)"
+  cpfp: "Full Support (send & receive)"
+  pbst: "Full Support (send & receive)"
+  musig2: "No Support"
+  payjoin: "Send Support"
+  coinjoin: "Full Support (send & receive)"
+  silent_payments: "No Support"
+  lightning: "No Support"
