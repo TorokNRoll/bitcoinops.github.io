@@ -25,13 +25,8 @@ and the open source community.
 [dashboard]: https://dashboard.bitcoinops.org/
 [blog]: /en/blog/
 [podcast]: /en/podcast/
-<<<<<<< HEAD
-[about]: /about
-[matrix]: /en/matrix/
-=======
 [about]: /en/about
-[compatibility]: /en/compatibility/
->>>>>>> origin/master
+[matrix]: /en/matrix/
 
 {% assign posts_en = site.posts | where:"lang","en" %}
 
