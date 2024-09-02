@@ -6,12 +6,12 @@ title: Offers
 # shortname: foo
 
 ## Optional.  An entry will be added to the topics index for each alias
-aliases:
+title-aliases:
   - BOLT12
 
 ## Required.  At least one category to which this topic belongs.  See
 ## schema for options
-categories:
+topic-categories:
   - Lightning Network
   - Invoicing
   - Wallet Collaboration Tools
@@ -96,6 +96,30 @@ optech_mentions:
 
   - title: "Eclair #2752 allows an offer to reference a node using a short channel identifier (SCID)"
     url: /en/newsletters/2023/11/22/#eclair-2752
+
+  - title: "Human readable payment instructions proposed that are compatible with offers"
+    url: /en/newsletters/2024/02/21/#dns-based-human-readable-bitcoin-payment-instructions
+
+  - title: "LDK #3078 adds support for inspection of BOLT12-returned invoices before payment"
+    url: /en/newsletters/2024/06/21/#ldk-3078
+
+  - title: "LDK #3082 adds an interface for building static reusable offers"
+    url: /en/newsletters/2024/06/21/#ldk-3082
+
+  - title: "Discussion of fully implementing offers versus incremently adding features from it"
+    url: /en/newsletters/2024/07/05/#adding-a-bolt11-invoice-field-for-blinded-paths
+
+  - title: "Core Lightning #7461 adds support for nodes to self-fetch and self-pay BOLT12 offers and invoices"
+    url: /en/newsletters/2024/07/26/#core-lightning-7461
+
+  - title: "CLN #7474 updates the offers plugin to understand the newly defined experimental TLV ranges"
+    url: /en/newsletters/2024/08/02/#core-lightning-7474
+
+  - title: "LDK #3139 improves the security of BOLT12 offers by authenticating the use of blinded paths"
+    url: /en/newsletters/2024/08/02/#ldk-3139
+
+  - title: "Proposal to allow opt-in identification and authentication of LN payers when using offers"
+    url: /en/newsletters/2024/08/16/#optional-identification-and-authentication-of-ln-payers
 
 ## Optional.  Same format as "primary_sources" above
 see_also:

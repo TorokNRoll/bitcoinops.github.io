@@ -6,14 +6,14 @@ title: Client-side validation
 # shortname: foo
 
 ## Optional.  An entry will be added to the topics index for each alias
-aliases:
+title-aliases:
   - RGB
   - Taro
   - Taproot Assets
 
 ## Required.  At least one category to which this topic belongs.  See
 ## schema for options
-categories:
+topic-categories:
   - Contract Protocols
 
 ## Optional.  Produces a Markdown link with either "[title][]" or
@@ -33,6 +33,9 @@ optech_mentions:
 
   - title: "Specifications published for taproot assets"
     url:  /en/newsletters/2023/09/13/#specifications-for-taproot-assets
+
+  - title: "Taproot Assets v0.4.0-alpha released"
+    url: /en/newsletters/2024/08/23/#taproot-assets-v0-4-0-alpha-released
 
 ## Optional.  Same format as "primary_sources" above
 see_also:
@@ -56,27 +59,34 @@ excerpt: >
   in the validation.
 
 ---
-A conceptually simple client-side validation protocol might associate a
-token with a particular UTXO.  Only the set of validators needs to know
-about that association; it does not need to be published to the block
-chain or anywhere else that is public.  When the UTXO is spent, the
-spending transaction associates the token with a new UTXO.  If Alice
+A conceptually simple client-side validation protocol might assign an
+off-chain state (like an amount of owned tokens) with a particular UTXO.
+Only the set of validators needs to know
+about that assignment; it does not need to be published anywhere public, such as the blockchain.
+When the UTXO is spent, the
+user can update the state and use spending transactions
+to assign the new state to a new UTXO. This mechanism is known as
+**single-use seals**, and it leverages anti-double-spending property of bitcoin.
+
+As an example, if Alice
 currently controls the UTXO associated with the token and Bob wants to
 buy it from her, she can provide him with evidence of the original
-association and then he can use his validated copy of the block chain
+assignment and then he can use his validated copy of the block chain
 plus client-side validation to verify the history of every transfer of the
 token leading up to Alice.  He can also verify that a transaction
 created by Alice is correctly formatted to assign the token to a UTXO
 that Bob controls.
 
-**[RGB][]** is a client-side validation protocol that uses
-[pay-to-contract][topic p2c] to allow transactions to commit to
-additional data, such as transfers.  The protocol has been designed to
-be highly flexible.
+**[RGB][]** is a client-side validation protocol for working with arbitrary
+reachable state and Turing-complete state evolution rules. It uses
+taproot-embedded OP_RETURN commitments (named **tapret**) to allow
+transactions to commit to smart contract state.
 
 **[Taproot Assets][]**, formerly called **Taro**, is a protocol heavily
 inspired by RGB that uses [taproot][topic taproot]'s commitment
-structure to allow transactions to commit to additional data.
+structure to allow transactions to commit to tokens. Unlike RGB, it
+does not allow state types other than token and doesn't have Turing
+completeness.
 Taproot's construction itself derives from pay-to-contract.  As the name
 suggests, initial protocol development is specifically focused on the
 transfer of assets (that is, digital tokens that represent assets).

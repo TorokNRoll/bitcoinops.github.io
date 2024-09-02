@@ -6,12 +6,12 @@ title: Dual funding
 # shortname: foo
 
 ## Optional.  An entry will be added to the topics index for each alias
-aliases:
+title-aliases:
   - Interactive funding protocol
 
 ## Required.  At least one category to which this topic belongs.  See
 ## schema for options
-categories:
+topic-categories:
   - Lightning Network
   - Liquidity Management
 
@@ -119,6 +119,18 @@ optech_mentions:
 
   - title: "Requirement to verify external inputs use segwit in dual funding and related protocols"
     url: /en/newsletters/2024/02/07/#requirement-to-verify-inputs-use-segwit-in-protocols-vulnerable-to-txid-malleability
+
+  - title: "BOLTs #851 adds support for dual funding and interactive tx construction to the LN specification"
+    url: /en/newsletters/2024/02/21/#bolts-851
+
+  - title: "LDK #2770 begins preparing to later add support for dual-funded channels"
+    url: /en/newsletters/2024/02/28/#ldk-2770
+
+  - title: "Eclair #2829 allows plugins to set a policy for contributing funds in a dual-funded channel open"
+    url: /en/newsletters/2024/03/06/#eclair-2829
+
+  - title: "LDK #2419 adds a state machine for handling interactive transaction construction"
+    url: /en/newsletters/2024/03/27/#ldk-2419
 
 ## Optional.  Same format as "primary_sources" above
 see_also:

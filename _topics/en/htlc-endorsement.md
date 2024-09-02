@@ -6,12 +6,12 @@ title: HTLC endorsement
 # shortname: foo
 
 ## Optional.  An entry will be added to the topics index for each alias
-#aliases:
+#title-aliases:
 #  - Foo
 
 ## Required.  At least one category to which this topic belongs.  See
 ## schema for options
-categories:
+topic-categories:
   - Lightning Network
 
 ## Optional.  Produces a Markdown link with either "[title][]" or
@@ -49,6 +49,12 @@ optech_mentions:
 
   - title: "HTLC endorsement testing and data collection"
     url: /en/newsletters/2023/08/09/#htlc-endorsement-testing-and-data-collection
+
+  - title: "Eclair #2884 implements BLIP4 for HTLC endorsement"
+    url: /en/newsletters/2024/08/09/#eclair-2884
+
+  - title: "BLIPs #27 adds BLIP04 for an experimental HTLC endorsement signaling protocol"
+    url: /en/newsletters/2024/08/16/#blips-27
 
 ## Optional.  Same format as "primary_sources" above
 see_also:

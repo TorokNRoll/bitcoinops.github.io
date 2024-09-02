@@ -2,12 +2,12 @@
 title: MuSig
 
 ## Optional.  An entry will be added to the topics index for each alias
-#aliases:
+#title-aliases:
 #  - Foo
 
 ## Required.  At least one category to which this topic belongs.  See
 ## schema for options
-categories:
+topic-categories:
   - Scripts and Addresses
 
 ## Required.  Use Markdown formatting.  Only one paragraph.  No links allowed.
@@ -132,6 +132,12 @@ optech_mentions:
 
   - title: "Proposed BIP for MuSig2 fields in PSBTs"
     url: /en/newsletters/2023/10/18/#proposed-bip-for-musig2-fields-in-psbts
+
+  - title: "PSBTs for multiple concurrent MuSig2 signing sessions"
+    url: /en/newsletters/2024/03/06/#psbts-for-multiple-concurrent-musig2-signing-sessions
+
+  - title: "BIPs 328, 390, and 373 added with specifications for MuSig2 key derivation, descriptors, and PSBTs"
+    url: /en/newsletters/2024/07/05/#bips-1540
 
 ## Optional.  Same format as "primary_sources" above
 see_also:

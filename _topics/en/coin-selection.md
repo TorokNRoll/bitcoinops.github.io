@@ -2,12 +2,12 @@
 title: Coin selection
 
 ## Optional.  An entry will be added to the topics index for each alias
-#aliases:
+#title-aliases:
 #  - Foo
 
 ## Required.  At least one category to which this topic belongs.  See
 ## schema for options
-categories:
+topic-categories:
   - Fee Management
   - Privacy Enhancements
 
@@ -68,6 +68,24 @@ optech_mentions:
 
   - title: "New coin selection strategies proposed and tested for Bitcoin Core"
     url: /en/newsletters/2024/01/03/#new-coin-selection-strategies
+
+  - title: "Bitcoin Core #27877 updates Bitcoin Core's wallet with CoinGrinder coin selection strategy"
+    url: /en/newsletters/2024/02/21/#bitcoin-core-27877
+
+  - title: "New coin selection strategy for LN liquidity providers"
+    url: /en/newsletters/2024/02/28/#coin-selection-for-liquidity-providers
+
+  - title: "LND #8378 makes several improvements to LND’s coin selection features"
+    url: /en/newsletters/2024/03/06/#lnd-8378
+
+  - title: "LND #8515 updates multiple RPCs to accept the name of the coin selection strategy to be used"
+    url: /en/newsletters/2024/04/10/#lnd-8515
+
+  - title: Notes from Bitcoin developer discussion about coin selection
+    url: /en/newsletters/2024/05/01/#coredev-tech-berlin-event
+
+  - title: "Effect of SubtractFeeFromOutputs on coin selection in Bitcoin Core"
+    url: /en/newsletters/2024/06/28/#how-does-subtractfeefrom-work
 
 ## Optional.  Same format as "primary_sources" above
 see_also:
